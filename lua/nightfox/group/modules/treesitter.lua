@@ -9,7 +9,7 @@ function M.get(spec, config, opts)
     -- Identifiers ------------------------------------------------------------
     ["@variable"] = { fg = syn.variable, style = stl.variables }, -- various variable names
     ["@variable.builtin"] = { fg = syn.builtin0, style = stl.variables }, -- built-in variable names (e.g. `this`)
-    ["@variable.parameter"] = { fg = syn.builtin1, stl.variables }, -- parameters of a function
+    ["@variable.parameter"] = { fg = syn.var_decl, style = stl.variables }, -- parameters of a function
     ["@variable.member"] = { fg = syn.field }, -- object and struct fields
 
     ["@constant"] = { link = "Constant" }, -- constant identifiers
@@ -100,7 +100,7 @@ function M.get(spec, config, opts)
     ["@markup.heading"] = { link = "Title" }, -- headings, titles (including markers)
 
     ["@markup.quote"] = { fg = spec.fg2 }, -- block quotes
-    ["@markup.math"] = { fg = syn.func }, -- math environments (e.g. `$ ... $` in LaTeX)
+    ["@markup.math"] = { fg = syn.var_decl }, -- math environments (e.g. `$ ... $` in LaTeX)
     -- ["@markup.environment"] = { }, -- environments (e.g. in LaTeX)
 
     ["@markup.link"] = { fg = syn.keyword, style = "bold" }, -- text references, footnotes, citations, etc.

@@ -82,7 +82,7 @@ function M.get(spec, config)
     diffOldFile     = { fg = spec.diag.warn }, -- Old file that is being diff against
     diffNewFile     = { fg = spec.diag.hint }, -- New file that is being compared to the old file
     diffFile        = { fg = spec.diag.info }, -- The filename of the diff ("diff --git a/readme.md b/readme.md")
-    diffLine        = { fg = spec.syntax.builtin2 }, -- Line information ("@@ -169,6 +169,9 @@")
+    diffLine        = { fg = spec.syntax.comment }, -- Line information ("@@ -169,6 +169,9 @@")
     diffIndexLine   = { fg = spec.syntax.preproc }, -- Index line of diff ("index bf3763d..94f0f62 100644")
 
     typescriptParens = { fg = syn.bracket,  }, -- For typescript

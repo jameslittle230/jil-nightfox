@@ -43,6 +43,7 @@ local template = require("nightfox.util.template")
 ---@field string string
 ---@field type string
 ---@field variable string
+---@field var_decl string
 
 ---@class SpecDiagnostic
 ---@field error string

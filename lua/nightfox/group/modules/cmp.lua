@@ -13,8 +13,8 @@ function M.get(spec, config, opts)
 
     CmpItemAbbr              = { fg = spec.fg1, },
     CmpItemAbbrDeprecated    = { fg = syn.dep, style = "strikethrough" },
-    CmpItemAbbrMatch         = { fg = syn.func, },
-    CmpItemAbbrMatchFuzzy    = { fg = syn.func, },
+    CmpItemAbbrMatch         = { fg = syn.var_decl, },
+    CmpItemAbbrMatchFuzzy    = { fg = syn.var_decl, },
 
     CmpItemKindDefault       = { fg = spec.fg2, },
     CmpItemMenu              = { link = "Comment" },

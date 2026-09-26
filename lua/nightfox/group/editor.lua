@@ -15,7 +15,7 @@ function M.get(spec, config)
     CursorIM        = { link = "Cursor" }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn    = { link = "CursorLine" }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine      = { bg = spec.bg3 }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-    Directory       = { fg = spec.syntax.func }, -- directory names (and other special names in listings)
+    Directory       = { fg = spec.syntax.var_decl }, -- directory names (and other special names in listings)
     DiffAdd         = { bg = spec.diff.add }, -- diff mode: Added line |diff.txt|
     DiffChange      = { bg = spec.diff.change }, -- diff mode: Changed line |diff.txt|
     DiffDelete      = { bg = spec.diff.delete }, -- diff mode: Deleted line |diff.txt|
@@ -64,7 +64,7 @@ function M.get(spec, config)
     TabLine         = { fg = spec.fg2, bg = spec.bg2 }, -- tab pages line, not active tab page label
     TabLineFill     = { bg = spec.bg0 }, -- tab pages line, where there are no labels
     TabLineSel      = { fg = spec.bg1, bg = spec.fg3 }, -- tab pages line, active tab page label
-    Title           = { fg = spec.syntax.func, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
+    Title           = { fg = spec.syntax.var_decl, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
     Visual          = inv.visual and { style = "reverse" } or { bg = spec.sel0 }, -- Visual mode selection
     VisualNOS       = inv.visual and { style = "reverse" } or { link = "visual" }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg      = { fg = spec.diag.warn }, -- warning messages
