@@ -62,7 +62,7 @@ function M.get(spec, config, opts)
     ["@keyword"] = { link = "Keyword" }, -- keywords not fitting into specific categories
     -- ["@keyword.coroutine"] = { }, -- keywords related to coroutines (e.g. `go` in Go, `async/await` in Python)
     ["@keyword.function"] = { fg = syn.keyword, style = stl.functions }, -- keywords that define a function (e.g. `func` in Go, `def` in Python)
-    ["@keyword.operator"] = { fg = syn.operator, style = stl.operators }, -- operators that are English words (e.g. `and` / `or`)
+    ["@keyword.operator"] = { fg = syn.keyword, style = stl.operators }, -- operators that are English words (e.g. `and` / `or`)
     ["@keyword.import"] = { link = "Include" }, -- keywords for including modules (e.g. `import` / `from` in Python)
     ["@keyword.storage"] = { link = "StorageClass" }, -- modifiers that affect storage in memory or life-time
     ["@keyword.repeat"] = { link = "Repeat" }, -- keywords related to loops (e.g. `for` / `while`)
@@ -135,7 +135,7 @@ function M.get(spec, config, opts)
     ["@label.json"] = { fg = spec.fg1 }, -- For labels: label: in C and :label: in Lua.
 
     -- lua
-    ["@constructor.lua"] = { fg = spec.fg2 }, -- Lua's constructor is { }
+    ["@constructor.lua"] = { fg = syn.bracket }, -- Lua's constructor is { }
 
     -- rust
     ["@field.rust"] = { fg = spec.fg2 },

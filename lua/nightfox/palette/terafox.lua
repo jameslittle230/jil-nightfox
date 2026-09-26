@@ -58,8 +58,11 @@ local function generate_spec(pal)
     sel1 = pal.sel1, -- Popup sel bg, search bg
   }
 
+  -- punctuation and operators sit three-quarters of the way from default to line-number fg
+  local dim = C(spec.fg1):blend(C(spec.fg3), 0.75):to_css()
+
   spec.syntax = {
-    bracket     = spec.fg2,           -- Brackets and Punctuation
+    bracket     = dim,                -- Brackets and Punctuation
     builtin0    = spec.fg1,           -- Builtin variable
     builtin1    = spec.fg1,           -- Builtin type
     builtin2    = pal.green.base,     -- Builtin const
@@ -73,7 +76,7 @@ local function generate_spec(pal)
     ident       = spec.fg1,           -- Identifiers
     keyword     = spec.fg1,           -- Keywords
     number      = pal.green.base,     -- Numbers
-    operator    = spec.fg1,           -- Operators
+    operator    = dim,                -- Operators
     preproc     = spec.fg1,           -- PreProc
     regex       = pal.green.base,     -- Regex
     statement   = spec.fg1,           -- Statements
