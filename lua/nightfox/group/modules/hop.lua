@@ -10,7 +10,7 @@ function M.get(spec, config, opts)
     HopNextKey   = { fg = c.cyan.base, style = "bold" },
     HopNextKey1  = { fg = c.blue.base, style = "bold" },
     HopNextKey2  = { fg = c.blue:subtle() },
-    HopUnmatched = { fg = spec.syntax.comment },
+    HopUnmatched = { fg = spec.palette.comment },
   }
 end
 

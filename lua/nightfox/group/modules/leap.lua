@@ -11,7 +11,7 @@ function M.get(spec, config, opts)
     LeapMatch = { [fg] = spec.palette.pink:harsh(), [bg] = b },
     LeapLabelPrimary = { [fg] = spec.palette.pink:harsh(), [bg] = b },
     LeapLabelSecondary = { [fg] = spec.palette.cyan:harsh(), [bg] = b },
-    LeapBackdrop = { fg = spec.syntax.comment },
+    LeapBackdrop = { fg = spec.palette.comment },
   }
 end
 

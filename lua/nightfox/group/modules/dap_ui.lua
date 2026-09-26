@@ -26,7 +26,7 @@ function M.get(spec, config, opts)
     DapUIBreakpointsInfo         = { fg = diag.info },
     DapUIBreakpointsCurrentLine  = { fg = diag.hint, style = "bold" },
     DapUIBreakpointsLine         = { link = "DapUILineNumber" },
-    DapUIBreakpointsDisabledLine = { fg = syn.comment },
+    DapUIBreakpointsDisabledLine = { fg = spec.palette.comment },
   }
 end
 

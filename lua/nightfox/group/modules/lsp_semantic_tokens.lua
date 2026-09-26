@@ -10,6 +10,8 @@ function M.get(spec, config, opts)
     ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
+    ["@lsp.type.function"] = {}, -- use treesitter styles so calls stay neutral
+    ["@lsp.type.method"] = {}, -- use treesitter styles so calls stay neutral
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
     ["@lsp.type.interface"] = { fg = spec.syntax.builtin3 },
     ["@lsp.type.keyword"] = { link = "@keyword" },
@@ -26,6 +28,8 @@ function M.get(spec, config, opts)
     ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.function.declaration"] = { link = "@function" },
+    ["@lsp.typemod.method.declaration"] = { link = "@function.method" },
     ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
     ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },

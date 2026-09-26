@@ -22,7 +22,7 @@ function M.get(spec, config, opts)
     NotifyWARNTitle  = { fg = spec.diag.warn },
     NotifyINFOTitle  = { fg = spec.diag.info },
     NotifyDEBUGTitle = { fg = spec.diag.hint },
-    NotifyTRACETitle = { fg = spec.syntax.comment },
+    NotifyTRACETitle = { fg = spec.palette.comment },
 
     NotifyERRORIcon  = { link = "NotifyERRORTitle" },
     NotifyWARNIcon   = { link = "NotifyWARNTitle" },

@@ -61,27 +61,27 @@ local function generate_spec(pal)
   }
 
   spec.syntax = {
-    bracket     = spec.fg2,           -- Brackets and Punctuation
-    builtin0    = pal.red.base,       -- Builtin variable
-    builtin1    = pal.cyan.bright,    -- Builtin type
-    builtin2    = pal.orange.bright,  -- Builtin const
-    builtin3    = pal.red.bright,     -- Not used
-    comment     = pal.comment,        -- Comment
-    conditional = pal.magenta.bright, -- Conditional and loop
-    const       = pal.orange.bright,  -- Constants, imports and booleans
+    bracket     = spec.fg1,           -- Brackets and Punctuation
+    builtin0    = spec.fg1,           -- Builtin variable
+    builtin1    = spec.fg1,           -- Builtin type
+    builtin2    = pal.magenta.base,   -- Builtin const
+    builtin3    = spec.fg1,           -- Not used
+    comment     = pal.pink.base,      -- Comment
+    conditional = spec.fg1,           -- Conditional and loop
+    const       = pal.magenta.base,   -- Constants, imports and booleans
     dep         = spec.fg3,           -- Deprecated
-    field       = pal.blue.base,      -- Field
+    field       = spec.fg1,           -- Field
     func        = pal.blue.bright,    -- Functions and Titles
-    ident       = pal.cyan.base,      -- Identifiers
-    keyword     = pal.magenta.base,   -- Keywords
-    number      = pal.orange.base,    -- Numbers
-    operator    = spec.fg2,           -- Operators
-    preproc     = pal.pink.bright,    -- PreProc
-    regex       = pal.yellow.bright,  -- Regex
-    statement   = pal.magenta.base,   -- Statements
+    ident       = spec.fg1,           -- Identifiers
+    keyword     = spec.fg1,           -- Keywords
+    number      = pal.magenta.base,   -- Numbers
+    operator    = spec.fg1,           -- Operators
+    preproc     = spec.fg1,           -- PreProc
+    regex       = pal.green.base,     -- Regex
+    statement   = spec.fg1,           -- Statements
     string      = pal.green.base,     -- Strings
-    type        = pal.yellow.base,    -- Types
-    variable    = pal.white.base,     -- Variables
+    type        = spec.fg1,           -- Types
+    variable    = spec.fg1,           -- Variables
   }
 
   spec.diag = {

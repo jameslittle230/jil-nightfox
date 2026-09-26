@@ -14,7 +14,7 @@ function M.get(spec, config, opts)
 
     ["@constant"] = { link = "Constant" }, -- constant identifiers
     ["@constant.builtin"] = { fg = syn.builtin2, style = stl.keywords }, -- built-in constant values
-    ["@constant.macro"] = { link = "Macro" }, -- constants defined by the preprocessor
+    ["@constant.macro"] = { link = "Constant" }, -- constants defined by the preprocessor
 
     ["@module"] = { fg = syn.builtin1 }, -- modules or namespaces
     -- ["@module.builtin"] = { }, -- built-in modules or namespaces
@@ -25,9 +25,9 @@ function M.get(spec, config, opts)
     -- ["@string.documentation"] = { }, -- string documenting code (e.g. Python docstrings)
     ["@string.regexp"] = { fg = syn.regex, style = stl.strings }, -- regular expressions
     ["@string.escape"] = { fg = syn.regex, style = "bold" }, -- escape sequences
-    ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
+    ["@string.special"] = { link = "String" }, -- other special strings (e.g. dates)
     -- ["@string.special.symbol"] = { }, -- symbols or atoms
-    ["@string.special.url"] = { fg = syn.const, style = "italic,underline" }, -- URIs (e.g. hyperlinks)
+    ["@string.special.url"] = { fg = syn.string, style = "italic,underline" }, -- URIs (e.g. hyperlinks)
     -- ["@string.special.path"] = { }, -- filenames
 
     ["@character"] = { link = "Character" }, -- character literals
@@ -40,20 +40,20 @@ function M.get(spec, config, opts)
     -- Types ------------------------------------------------------------------
     ["@type"] = { link = "Type" }, -- type or class definitions and annotations
     ["@type.builtin"] = { fg = syn.builtin1, style = stl.types }, -- built-in types
-    -- ["@type.definition"] = { }, -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
+    ["@type.definition"] = { fg = syn.func, style = stl.types }, -- identifiers in type definitions (e.g. `typedef <type> <identifier>` in C)
     -- ["@type.qualifier"] = { }, -- type qualifiers (e.g. `const`)
 
-    ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
+    ["@attribute"] = { fg = spec.fg1 }, -- attribute annotations (e.g. Python decorators)
     ["@property"] = { fg = syn.field }, -- the key in key/value pairs
 
     -- Functions --------------------------------------------------------------
     ["@function"] = { link = "Function" }, -- function definitions
     ["@function.builtin"] = { fg = syn.builtin0, style = stl.functions }, -- built-in functions
-    -- ["@function.call"] = { }, -- function calls
+    ["@function.call"] = { fg = spec.fg1 }, -- function calls
     ["@function.macro"] = { fg = syn.builtin0, style = stl.functions }, -- preprocessor macros
 
     -- ["@function.method"] = { }, -- method definitions
-    -- ["@function.method.call"] = { }, -- method calls
+    ["@function.method.call"] = { fg = spec.fg1 }, -- method calls
 
     ["@constructor"] = { fg = syn.ident }, -- constructor calls and definitions
     ["@operator"] = { link = "Operator" }, -- symbolic operators (e.g. `+` / `*`)
@@ -119,7 +119,7 @@ function M.get(spec, config, opts)
     ["@diff.delta"] = { link = "diffChanged" }, -- changed text (for diff files)
 
     ["@tag"] = { fg = syn.keyword }, -- XML-style tag names (and similar)
-    ["@tag.attribute"] = { fg = syn.func, style = "italic" }, -- XML-style tag attributes
+    ["@tag.attribute"] = { fg = spec.fg1, style = "italic" }, -- XML-style tag attributes
     ["@tag.delimiter"] = { fg = syn.builtin1 }, -- XML-style tag delimiters
 
     -- Misc -------------------------------------------------------------------
@@ -132,7 +132,7 @@ function M.get(spec, config, opts)
     -- Language specific -------------------------------------------------------
 
     -- json
-    ["@label.json"] = { fg = syn.func }, -- For labels: label: in C and :label: in Lua.
+    ["@label.json"] = { fg = spec.fg1 }, -- For labels: label: in C and :label: in Lua.
 
     -- lua
     ["@constructor.lua"] = { fg = spec.fg2 }, -- Lua's constructor is { }
@@ -141,7 +141,7 @@ function M.get(spec, config, opts)
     ["@field.rust"] = { fg = spec.fg2 },
 
     -- yaml
-    ["@variable.member.yaml"] = { fg = syn.func }, -- For fields.
+    ["@variable.member.yaml"] = { fg = spec.fg1 }, -- For fields.
   }
 
   -- Legacy highlights

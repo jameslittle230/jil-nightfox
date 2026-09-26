@@ -38,7 +38,7 @@ function M.get(spec, config)
     Structure      = { link = "Type" }, -- struct, union, enum, etc.
     Typedef        = { link = "Type" }, -- A typedef
 
-    Special        = { fg = syn.func }, -- (preferred) any special symbol
+    Special        = { fg = spec.fg1 }, -- (preferred) any special symbol
     SpecialChar    = { link = "Special" }, -- special character in a constant
     Tag            = { link = "Special" }, -- you can use CTRL-] on this
     Delimiter      = { link = "Special" }, -- character that needs attention

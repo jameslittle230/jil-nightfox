@@ -6,7 +6,7 @@ function M.get(spec, config, opts)
   local syn = spec.syntax
 
   return {
-    CocInlayHint = { fg = syn.comment, bg = opts.background and spec.bg2 or "NONE" },
+    CocInlayHint = { fg = spec.palette.comment, bg = opts.background and spec.bg2 or "NONE" },
   }
 end
 
